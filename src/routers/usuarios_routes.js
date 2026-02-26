@@ -1,0 +1,11 @@
+import { Router } from "express";
+import { login, perfil, registro } from "../controllers/usuarios_controller.js"
+import { verificarTokenJWT } from "../middlewares/authmiddleware.js"
+
+const router = Router()
+
+router.post("/registro", registro)
+router.post("/login", login)
+router.get("/perfil", verificarTokenJWT, perfil)
+
+export default router
