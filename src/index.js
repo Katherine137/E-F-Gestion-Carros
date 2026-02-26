@@ -3,6 +3,7 @@ dotenv.config();
 import app from "./server.js";
 import connection from "./database.js";
 
+
 const startServer = async () => {
   try {
     console.log('URI:', process.env.MONGODB_URI)
